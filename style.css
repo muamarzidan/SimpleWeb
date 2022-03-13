@@ -1,0 +1,196 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+    font: 16px/28px arial, sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.container {
+    width: 950px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.header {
+    padding: 20px;
+}
+
+.header .Title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header ul li {
+    /* buat jadi ul itu ke kanan/horizontal */
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    /* buat ngebesarin hovernya */
+    padding: 5px;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.header a:hover {
+    background-color: #333;
+    color: #fff;
+    cursor:pointer;
+    margin:10px;
+
+}
+
+.hero {
+    height: 500px;
+    background-image: url(images/image_content.jpg);
+    background-size: cover;
+    background-position: 0 ;
+    border-bottom: 5px solid rgb(70, 70, 70);
+    border-top: 5px solid rgb(70, 70, 70);
+    
+}
+
+.main {
+    width: 600px;
+    padding: 20px;
+    /* agar lebar/width nya nggk berubah pake box sizing dengan value border box */
+    box-sizing: border-box;
+    /* float disini bakal misah dari laman,karena nggk dia anggep 1 laman,jadi yang ada didalam main itu bakal misah ama yang lain
+    solusinya pake micro clearfix yang ada dibawah */
+    float: left;
+}
+
+.main .Title {
+    font-size: 30px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+.main .link {
+    font-size: 15px;
+    margin-top: 10px;
+    /* text-align: center; */
+
+}
+
+.link a {
+    text-decoration: none;
+}
+
+.main p {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+/* sidebar */
+.sidebar {
+    width: 300px;
+    float: right;
+    padding: 10px;
+
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    color:#333;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar img {
+    width: 70px;
+    height: 70px;
+    /* float disini agar si gamabr itu dikelilingi paragraph nya/tulisan */
+    float: left;
+    padding-right: 10px;
+    font: 12px/18px arial;
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer .copyright {
+    text-align: center;
+}
+
+.main .para1 {
+    margin-top: 30px;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
